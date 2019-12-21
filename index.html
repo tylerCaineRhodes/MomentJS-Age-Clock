@@ -5,8 +5,10 @@
   <title>Birthday Countdown</title>
   <link rel="stylesheet" href="style.css">
   <!--Expose Moment.js and moment-precise-range-plugin to this file-->
-  <script type="text/javascript" src="./node_modules/moment/moment.js"></script>
-  <script type="text/javascript" src="./node_modules/moment-precise-range-plugin/moment-precise-range.js"></script>
+  <script type="text/javascript" src="node_modules/moment/moment.js"></script>
+  <script type="text/javascript" src="moment-precise-range.js"></script>
+   
+  
 </head>
 <body>
   <div class="countdown"></div>
@@ -20,8 +22,14 @@
       /* 
       Use moment() to create a new moment object from the present time
       Fix this function to display someone's exact age
+       var age = moment({unit: value, ...});
       */
-      document.querySelector('.countdown').innerHTML = moment()
+      var now = moment();
+      var birthday = moment(window.birthday);
+      var exactAge = moment.preciseDiff(birthday, now);
+//       var age = moment({ year :YYYY, month :MM, day :DD});
+     
+document.querySelector('.countdown').innerHTML = exactAge;
     }
   </script>
 </body>
