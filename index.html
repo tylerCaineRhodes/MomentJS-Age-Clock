@@ -2,41 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Birthday Countdown</title>
+  <title>Depressing Fact</title>
   <link rel="stylesheet" href="style.css">
-  <!--Expose Moment.js and moment-precise-range-plugin to this file-->
+
   <script type="text/javascript" src="node_modules/moment/moment.js"></script>
   <script type="text/javascript" src="moment-precise-range.js"></script>
-   
-  
 </head>
+
 <body>
-  
-  <!-- <img src="/Users/tylerrhodes/Images/ghost-1-1386146-639x597.jpg" alt="skull" width="50px" height="50px"> -->
-  
-
   <div class="countdown"></div>
-  
-  <script type="text/javascript">
-    var name = prompt('What is your full name?');
-    window.birthday = prompt('What is your birthday? MM/DD/YYYY')
 
-    // invoke displayAge once
-    displayAge()
-    // invoke displayAge on an interval once a second
-    setInterval(displayAge, 1000)
-    function displayAge(){
-      /* 
-      Use moment() to create a new moment object from the present time
-      Fix this function to display someone's exact age
-       var age = moment({unit: value, ...});
-      */
-      var now = moment();
-      var birthday = moment(window.birthday);
-      var exactAge = name + " is " + moment.preciseDiff(birthday, now) + " closer to death";
-//       var age = moment({ year :YYYY, month :MM, day :DD});
-     
-document.querySelector('.countdown').innerHTML = exactAge;
-    }
-  </script>
+<script src="script.js"></script>
 </body>
+</html>
