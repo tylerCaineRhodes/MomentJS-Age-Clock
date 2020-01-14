@@ -11,9 +11,16 @@
   
 </head>
 <body>
+  
+  <!-- <img src="/Users/tylerrhodes/Images/ghost-1-1386146-639x597.jpg" alt="skull" width="50px" height="50px"> -->
+  
+
   <div class="countdown"></div>
+  
   <script type="text/javascript">
+    var name = prompt('What is your full name?');
     window.birthday = prompt('What is your birthday? MM/DD/YYYY')
+
     // invoke displayAge once
     displayAge()
     // invoke displayAge on an interval once a second
@@ -26,7 +33,7 @@
       */
       var now = moment();
       var birthday = moment(window.birthday);
-      var exactAge = moment.preciseDiff(birthday, now);
+      var exactAge = name + " is " + moment.preciseDiff(birthday, now) + " closer to death";
 //       var age = moment({ year :YYYY, month :MM, day :DD});
      
 document.querySelector('.countdown').innerHTML = exactAge;
